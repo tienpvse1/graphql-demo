@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: Int!
+  firstName: String
+  lastName: String
+}
+
+type Message {
+  message: String!
+  sender: String!
+  to: String
+}
+
+type Query {
+  getUser(id: Int!): User!
+  getAllUser: [User!]!
+}
+
+type Mutation {
+  createUser(user: UserInput!): User!
+  createMessage(createMessageInput: CreateMessageInput!): Message!
+}
+
+input UserInput {
+  id: Float = 77
+  firstName: String!
+  lastName: String!
+}
+
+input CreateMessageInput {
+  message: String!
+  sender: String!
+  to: String
+}
+
+type Subscription {
+  messageSended(myIp: String!): Message!
+}
