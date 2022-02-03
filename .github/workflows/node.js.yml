@@ -11,6 +11,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
+
+      - name: collect necessary lib
+        run: pnpm i
       - name: build an optimistic production
         run: pnpm run build
       - name: start the server

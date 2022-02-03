@@ -25,7 +25,7 @@ type Mutation {
 }
 
 input UserInput {
-  id: Float = 77
+  id: Float = 33
   firstName: String!
   lastName: String!
 }
