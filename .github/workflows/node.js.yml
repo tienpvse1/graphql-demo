@@ -17,4 +17,4 @@ jobs:
       - name: build an optimistic production
         run: pnpm run build
       - name: start the server
-        run: pnpm run start:prod
+        run: pm2 start dist/main.js
